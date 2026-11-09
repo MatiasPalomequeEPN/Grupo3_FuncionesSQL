@@ -74,3 +74,20 @@ select Ltrim(stor_name) as SinEspacioIzq from stores
 
 --Función Replace
 select Replace(au_fname, 'a', '1') as NombreReemplazado, Replace(au_lname, 'e','O_O') as ApellidoReemplazado from authors
+
+--Función Right
+select job_desc, RIGHT(job_desc, 7) AS 'Ultimos7CaracteresJobs' from jobs
+
+--Función Rtrim
+select stor_name, RTRIM(stor_name, 's') AS 'SinSFinal' from stores
+
+--Función Substring
+select emp_id, SUBSTRING(emp_id, 4,5) AS 'NumeroEmpleado' from employee
+
+--Función Trim
+UPDATE stores
+set stor_name = '   ' + stor_name
+select stor_name, TRIM(stor_name) AS 'SinEspacios' from stores
+
+--Función Upper
+select job_desc, UPPER(job_desc) AS 'EnMayúsculas' from jobs
